@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr Faisal Ahmad</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:24px;
+background:
+radial-gradient(circle at 20% 20%,#38bdf8 0,transparent 25%),
+radial-gradient(circle at 80% 15%,#a78bfa 0,transparent 30%),
+linear-gradient(135deg,#020617,#0f172a,#111827);
+color:#fff;
+}
+.card{
+max-width:1000px;
+width:100%;
+padding:60px;
+border-radius:30px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.18);
+box-shadow:0 25px 80px rgba(0,0,0,.4);
+}
+.badge{
+display:inline-block;
+padding:10px 18px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+margin-bottom:24px;
+font-weight:bold;
+}
+h1{
+font-size:clamp(3rem,8vw,6rem);
+line-height:1;
+margin-bottom:20px;
+}
+.gradient{
+background:linear-gradient(90deg,#38bdf8,#a78bfa,#f472b6);
+-webkit-background-clip:text;
+color:transparent;
+}
+p{
+font-size:1.25rem;
+line-height:1.7;
+color:#dbeafe;
+max-width:700px;
+}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+margin:40px 0;
+}
+.box{
+padding:22px;
+border-radius:20px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+}
+.box h3{margin:10px 0}
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:15px 28px;
+background:#fff;
+color:#111827;
+text-decoration:none;
+font-weight:bold;
+border-radius:999px;
+}
+footer{
+margin-top:40px;
+opacity:.8;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="badge">👨‍⚕️ Clinical Oncology Portfolio</div>
+
+<h1>Hello, I'm<br><span class="gradient">Dr Faisal Ahmad</span></h1>
+
+<p>
+Welcome to my professional website. This portfolio will document my journey in
+Clinical Oncology, including education, research, quality improvement,
+teaching and future projects.
+</p>
+
+<div class="grid">
+<div class="box">
+<h3>🧬 Oncology</h3>
+<p>Radiotherapy • Systemic Therapy • Cancer Care</p>
+</div>
+
+<div class="box">
+<h3>🎓 Teaching</h3>
+<p>Medical education, presentations and learning resources.</p>
+</div>
+
+<div class="box">
+<h3>📊 Research</h3>
+<p>Quality improvement, publications and academic work.</p>
+</div>
+</div>
+
+<a class="btn" href="mailto:your@email.com">Contact Me</a>
+
+<footer>
+© 2026 Dr Faisal Ahmad • Website under development
+</footer>
+</div>
+</body>
+</html>
