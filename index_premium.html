@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr Faisal Ahmad | Clinical Oncology Portfolio</title>
+<meta name="description" content="Professional portfolio of Dr Faisal Ahmad - Clinical Oncology, teaching, quality improvement and research.">
+
+<style>
+:root{
+  --bg:#050816;
+  --panel:rgba(255,255,255,.09);
+  --panel2:rgba(255,255,255,.14);
+  --text:#ffffff;
+  --muted:#cbd5e1;
+  --blue:#38bdf8;
+  --purple:#a78bfa;
+  --pink:#f472b6;
+  --green:#34d399;
+  --border:rgba(255,255,255,.16);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(56,189,248,.55),transparent 28%),
+    radial-gradient(circle at 85% 15%,rgba(167,139,250,.55),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(244,114,182,.30),transparent 30%),
+    linear-gradient(135deg,#020617,#0f172a,#111827);
+}
+body:after{
+  content:"";
+  position:fixed;
+  inset:-80px;
+  z-index:-2;
+  background:
+    radial-gradient(circle,rgba(255,255,255,.14) 1px,transparent 1px);
+  background-size:34px 34px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.28),transparent 75%);
+}
+.glow{
+  position:fixed;
+  width:360px;height:360px;border-radius:50%;
+  filter:blur(80px);
+  opacity:.45;
+  z-index:-1;
+  animation:float 12s ease-in-out infinite alternate;
+}
+.g1{background:var(--blue);left:-80px;top:120px}
+.g2{background:var(--purple);right:-100px;top:60px;animation-delay:2s}
+.g3{background:var(--pink);left:35%;bottom:-120px;animation-delay:4s}
+@keyframes float{from{transform:translateY(0) scale(1)}to{transform:translateY(60px) scale(1.12)}}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  padding:18px clamp(18px,5vw,72px);
+  background:rgba(5,8,22,.66);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+.logo{
+  color:white;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:-.03em;
+  font-size:1.1rem;
+}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{
+  color:#e5e7eb;
+  text-decoration:none;
+  font-size:.92rem;
+  padding:8px 10px;
+  border-radius:999px;
+}
+nav a:hover{background:rgba(255,255,255,.1);color:white}
+
+section{padding:90px clamp(18px,5vw,72px)}
+.hero{
+  min-height:92vh;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  align-items:center;
+  gap:36px;
+}
+.badge{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  padding:10px 15px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid var(--border);
+  color:#e0f2fe;
+  font-weight:800;
+  margin-bottom:26px;
+}
+h1{
+  font-size:clamp(3.2rem,8.5vw,7.4rem);
+  line-height:.88;
+  letter-spacing:-.08em;
+  margin-bottom:26px;
+}
+.gradient{
+  background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.lead{
+  max-width:780px;
+  font-size:clamp(1.1rem,2.3vw,1.45rem);
+  line-height:1.7;
+  color:#dbeafe;
+}
+.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  padding:15px 24px;
+  border-radius:999px;
+  font-weight:900;
+}
+.primary{background:white;color:#06111f}
+.secondary{color:white;border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.06)}
+
+.profile{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:36px;
+  padding:28px;
+  box-shadow:0 40px 120px rgba(0,0,0,.4);
+}
+.avatar{
+  width:170px;height:170px;border-radius:50%;
+  margin:0 auto 24px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:4.5rem;
+  background:linear-gradient(135deg,rgba(56,189,248,.85),rgba(167,139,250,.85),rgba(244,114,182,.75));
+  border:4px solid rgba(255,255,255,.25);
+}
+.profile h2{text-align:center;font-size:1.8rem;margin-bottom:10px}
+.profile p{text-align:center;color:var(--muted);line-height:1.6}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:24px;
+}
+.stat{
+  padding:16px;
+  border-radius:18px;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--border);
+}
+.stat strong{display:block;font-size:1.2rem}
+.stat span{color:var(--muted);font-size:.9rem}
+
+.heading{max-width:850px;margin-bottom:32px}
+.kicker{color:#bae6fd;font-weight:900;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;margin-bottom:12px}
+h2.section-title{font-size:clamp(2.1rem,5vw,4rem);letter-spacing:-.05em;line-height:1.05}
+.text{color:var(--muted);font-size:1.08rem;line-height:1.75;max-width:930px}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:28px;
+}
+.card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:26px;
+  padding:24px;
+  box-shadow:0 20px 80px rgba(0,0,0,.2);
+}
+.card .icon{font-size:2rem;margin-bottom:14px}
+.card h3{font-size:1.2rem;margin-bottom:10px}
+.card p,.card li{color:var(--muted);line-height:1.65}
+.card ul{padding-left:18px;margin-top:10px}
+.timeline{
+  display:grid;
+  gap:14px;
+  margin-top:28px;
+  max-width:920px;
+}
+.item{
+  padding:22px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:22px;
+}
+.item strong{display:block;margin-bottom:6px}
+.contact-box{
+  max-width:780px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:28px;
+  padding:28px;
+}
+.contact-box a{color:white}
+footer{
+  padding:34px 18px;
+  text-align:center;
+  color:#cbd5e1;
+  border-top:1px solid var(--border);
+  background:rgba(5,8,22,.55);
+}
+@media(max-width:850px){
+  header{align-items:flex-start;flex-direction:column}
+  nav{gap:6px}
+  nav a{font-size:.84rem;padding:7px 8px}
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:60px}
+  .grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  section{padding-top:70px;padding-bottom:70px}
+}
+</style>
+</head>
+
+<body>
+<div class="glow g1"></div>
+<div class="glow g2"></div>
+<div class="glow g3"></div>
+
+<header>
+  <a class="logo" href="#home">Dr Faisal Ahmad</a>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#cv">CV</a>
+    <a href="#research">Research</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div>
+    <div class="badge">👨‍⚕️ Clinical Oncology Portfolio</div>
+    <h1>Hello, I’m <span class="gradient">Dr Faisal Ahmad</span></h1>
+    <p class="lead">A UK-based doctor developing a professional portfolio in Clinical Oncology, medical education, quality improvement, research and digital health.</p>
+    <div class="actions">
+      <a class="button primary" href="#contact">Contact Me</a>
+      <a class="button secondary" href="#about">Explore Portfolio</a>
+    </div>
+  </div>
+
+  <aside class="profile">
+    <div class="avatar">🩺</div>
+    <h2>Professional Portfolio</h2>
+    <p>Clinical medicine, oncology learning, teaching, QI and academic development in one place.</p>
+    <div class="stats">
+      <div class="stat"><strong>MRCP (UK)</strong><span>Postgraduate qualification</span></div>
+      <div class="stat"><strong>NHS Doctor</strong><span>UK clinical experience</span></div>
+      <div class="stat"><strong>Oncology</strong><span>Career direction</span></div>
+      <div class="stat"><strong>QI / Teaching</strong><span>Portfolio focus</span></div>
+    </div>
+  </aside>
+</section>
+
+<section id="about">
+  <div class="heading">
+    <div class="kicker">About</div>
+    <h2 class="section-title">A focused medical portfolio.</h2>
+  </div>
+  <p class="text">I am a UK-based doctor with a growing interest in Clinical Oncology. This website is designed as a living portfolio to document clinical development, learning reflections, quality improvement work, teaching activity, research interests and future academic outputs.</p>
+
+  <div class="grid">
+    <div class="card"><div class="icon">🎯</div><h3>Career Direction</h3><p>Clinical Oncology, cancer pathways, radiotherapy, systemic therapy and patient-centred communication.</p></div>
+    <div class="card"><div class="icon">🧠</div><h3>Learning</h3><p>Structured oncology learning, practical clinical reasoning, guidelines, evidence and useful resources.</p></div>
+    <div class="card"><div class="icon">💡</div><h3>Digital Health</h3><p>Interest in simple digital tools that support medical learning, clinical workflow and patient care.</p></div>
+  </div>
+</section>
+
+<section id="cv">
+  <div class="heading">
+    <div class="kicker">CV</div>
+    <h2 class="section-title">Training and professional development.</h2>
+  </div>
+  <div class="timeline">
+    <div class="item"><strong>Qualifications</strong><p class="text">MBBS and MRCP (UK). Further portfolio details will be added here.</p></div>
+    <div class="item"><strong>Clinical Experience</strong><p class="text">UK NHS experience across acute medicine and specialty medicine, with ongoing development towards Clinical Oncology.</p></div>
+    <div class="item"><strong>Courses and Skills</strong><p class="text">Clinical skills, resuscitation training, procedural development and specialty-focused learning.</p></div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="heading">
+    <div class="kicker">Research & QI</div>
+    <h2 class="section-title">Improving care through evidence and reflection.</h2>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">📊</div><h3>Quality Improvement</h3><p>Audit and QI projects including methodology, interventions, outcome measurement and reflection.</p></div>
+    <div class="card"><div class="icon">📚</div><h3>Academic Work</h3><p>Future case reports, posters, publications and conference work will be displayed here.</p></div>
+    <div class="card"><div class="icon">🔬</div><h3>Research Interests</h3><p>Clinical Oncology, cancer outcomes, radiotherapy, systemic therapy and digital health innovation.</p></div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="heading">
+    <div class="kicker">Teaching</div>
+    <h2 class="section-title">Medical education and presentations.</h2>
+  </div>
+  <p class="text">This section will include teaching sessions, journal clubs, departmental presentations, feedback, learning resources and reflections. The aim is to build a clear record of teaching activity and educational development.</p>
+  <div class="grid">
+    <div class="card"><div class="icon">🎓</div><h3>Teaching Sessions</h3><p>Clinical topics, practical learning and exam-focused teaching.</p></div>
+    <div class="card"><div class="icon">🗣️</div><h3>Presentations</h3><p>Departmental teaching, case discussions and journal club activity.</p></div>
+    <div class="card"><div class="icon">📝</div><h3>Learning Notes</h3><p>Useful summaries and resources for oncology and general medicine.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="heading">
+    <div class="kicker">Contact</div>
+    <h2 class="section-title">Professional contact.</h2>
+  </div>
+  <div class="contact-box">
+    <p class="text">For professional contact, collaboration, teaching or research-related enquiries:</p>
+    <br>
+    <p><strong>Email:</strong> <a href="mailto:your@email.com">your@email.com</a></p>
+    <p><strong>LinkedIn:</strong> Coming soon</p>
+    <p><strong>ORCID:</strong> Coming soon</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Dr Faisal Ahmad · Clinical Oncology Portfolio
+</footer>
+
+</body>
+</html>
